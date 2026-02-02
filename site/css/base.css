@@ -103,8 +103,7 @@ code > .macro {
 	color: color-mix(in srgb, magenta, white);
 }
 
-code > .lc {
-	font-weight: 500;
+code > .memo {
 	color: gray;
 }
 
