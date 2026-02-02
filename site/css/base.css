@@ -47,3 +47,7 @@ body.hy {
 	z-index: -10;
 	mask-image: linear-gradient(calc(-90deg), white, white 50%, transparent 95%, transparent);
 }
+
+.hy.card {
+	max-width: unset;
+}
