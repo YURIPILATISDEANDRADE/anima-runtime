@@ -36,3 +36,14 @@
 body.hy {
 	background-color: var(--theme);
 }
+
+.big-banner::after {
+	width: 100%;
+	height: 20em;
+	margin-top: -6em;
+	content: "AAAAAAA";
+	position: absolute;
+	background-color: var(--sub-color);
+	z-index: -10;
+	mask-image: linear-gradient(calc(-90deg), white, white 50%, transparent 95%, transparent);
+}
