@@ -60,6 +60,8 @@ body.hy {
 }
 
 code {
+	font-family: monospace !important;
+	font-size: 12pt !important;
 	width: 60% !important;
 	background-color: #222;
 	color: white !important;
@@ -72,7 +74,38 @@ code {
 	overflow-x: scroll;
 	word-wrap: normal;
 	white-space: nowrap !important;
+}
 
+code > .kw {
+	font-weight: bold;
+	color: color-mix(in oklab, blue, white);
+}
+
+code > .op {
+	color: lightcoral !important;
+}
+
+code > .fn {
+	color: lightgreen !important;
+}
+
+code > .str {
+	color: gold !important;
+}
+
+code > .num {
+	font-weight: bold;
+	color: violet !important;
+}
+
+code > .macro {
+	font-weight: 500;
+	color: color-mix(in srgb, magenta, white);
+}
+
+code > .lc {
+	font-weight: 500;
+	color: gray;
 }
 
 .description {

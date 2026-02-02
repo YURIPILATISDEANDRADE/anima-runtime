@@ -80,16 +80,16 @@
 			<div class="hy card flex vertical center override">
 				<div class="hy subcard flex horizontal center">
 					<code class="hy left-text">
-						<span style="color:lightblue;">import</span>
-						core<span style="color: lightcoral">;</span>
+						<span class="kw">import</span>
+						core<span class="op">;</span>
 						<br><br>
-						<span style="color:lightblue;">using</span>
-						core<span style="color: lightcoral">.</span>IO<span style="color: lightcoral">;</span>
+						<span class="kw">using</span>
+						core<span class="op">.</span>IO<span class="op">;</span>
 						<br><br>
-						<span style="color: lightblue;">main</span>
-						<span style="color: lightcoral">{</span><br>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightgreen;">writeLine</span><span style="color: lightcoral">(</span><span style="color: gold">"Hello, World!"</span><span style="color: lightcoral">);</span><br>
-						<span style="color: lightcoral">}</span>
+						<span class="kw">main</span>
+						<span class="op">{</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">writeLine</span><span class="op">(</span><span class="str">"Hello, World!"</span><span class="op">);</span><br>
+						<span class="op">}</span>
 	
 					</code>
 					<div class="hy description">
@@ -103,64 +103,68 @@
 				</div>
 				<div class="hy subcard flex horizontal center center-text">
 					<code class="hy left-text">
-						<span style="color:lightblue;">import</span> core<span style="color: lightcoral">;</span>
-						<br><br>
-						<span style="color:lightblue;">using</span> core<span style="color: lightcoral">.</span>Convert<span style="color: lightcoral">;</span>
+						<span class="kw">import</span> core<span class="op">;</span>
 						<br>
-						<span style="color:lightblue;">using</span> core<span style="color: lightcoral">.</span>IO<span style="color: lightcoral">;</span>
+						<br><span class="memo">// For toString</span><br>
+						<span class="kw">using</span> core<span class="op">.</span>Convert<span class="op">;</span>
+						<br><span class="memo">// For writeLine</span><br>
+						<span class="kw">using</span> core<span class="op">.</span>IO<span class="op">;</span>
 						<br><br>
-						<span style="color:lightblue;">namespace</span> Hello <span style="color: lightcoral">{</span>
+						<span class="kw">namespace</span>
+						Hello
+						<span class="op">{</span>
 							<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:lightblue;">macro</span> greet <span style="color: lightcoral">{</span>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">macro</span>
+							<span class="macro">greet</span>
+							<span class="op">{</span>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span style="color: lightcoral">{
-
-								</span>$name
-								<span style="color: lightcoral">:</span>
-								<span style="color: lightblue">str</span>
-								<span style="color: lightcoral">}</span>
-								<span style="color: lightcoral">=></span>
-								<span style="color: lightcoral">{
+								<span class="op">{
+								</span><span class="op">$</span>name
+								<span class="op">:</span>
+								<span class="kw">str</span>
+								<span class="op">}</span>
+								<span class="op">=></span>
+								<span class="op">{
 									(
-									</span><span style="color: gold">"Hello, "</span>
-									<span style="color: lightcoral">+</span>
-									<span style="color: lightcoral">(	
-									</span>$name
-									<span style="color: lightcoral">+</span>
-									<span style="color: gold">"!"</span>
-									<span style="color: lightcoral">) )
+									</span><span class="str">"Hello, "</span>
+									<span class="op">+</span>
+									<span class="op">(	
+									</span><span class="op">$</span>name
+									<span class="op">+</span>
+									<span class="str">"!"</span>
+									<span class="op">) )
 									}</span>
 								<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span style="color: lightcoral">{
-								</span>$name
-								<span style="color: lightcoral">:</span>
-								<span style="color: lightblue">expr</span>
-								<span style="color: lightcoral">}</span>
-								<span style="color: lightcoral">=></span>
-								<span style="color: lightcoral">{
+								<span class="op">{
+								</span><span class="op">$</span>name
+								<span class="op">:</span>
+								<span class="kw">expr</span>
+								<span class="op">}</span>
+								<span class="op">=></span>
+								<span class="op">{
 									(
-									</span><span style="color: gold">"Hello, "</span>
-									<span style="color: lightcoral">+</span>
-									<span style="color: lightcoral">(</span>
-									<span style="color: lightgreen;">toString</span><span style="color: lightcoral">(
-									</span>$name<span style="color: lightcoral"> ) +</span>
-									<span style="color: gold">"!"</span>
-									<span style="color: lightcoral">) )
-									}</span>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightcoral">}</span>
+									</span><span class="str">"Hello, "</span>
+									<span class="op">+</span>
+									<span class="op">(</span>
+									<span class="fn">toString</span><span class="op">(
+									</span><span class="op">$</span>name<span class="op"> ) +</span>
+									<span class="str">"!"</span>
+									<span class="op">) )
+								}</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="op">}</span>
 							<br>
-							<span style="color: lightcoral">}</span>
+							<span class="op">}</span>
 							<br><br>
 						<span style="color: lightblue;">main</span> </span>
-						<span style="color: lightcoral">{</span>
+						<span class="op">{</span>
 							<br>
 							&nbsp;&nbsp;&nbsp;
-							<span style="color: lightgreen;">writeLine</span><span style="color: lightcoral">(</span>Hello<span style="color: lightcoral">.</span>greet
-							<span style="color: gold">"someone"</span><span style="color: lightcoral">);</span>
+							<span class="fn">writeLine</span><span class="op">(</span>Hello<span class="op">.</span><span class="macro">greet</span>
+							<span class="str">"someone"</span><span class="op">);</span>
 							<br>
-						<span style="color: lightcoral">}</span>
+						<span class="op">}</span>
 					</code>
 					<div class="hy description">
 						<p class="hy center-text" style="font-weight: bold;">
@@ -181,22 +185,21 @@
 			<div class="hy card flex vertical center override">
 				<div class="hy subcard flex horizontal center">
 					<code class="hy left-text">
-						<span style="color: lightblue">bop</span>
-						<span style="color: violet">1</span>
-						<span style="color: lightcoral">+</span>
-						<span style="color: violet">2</span>
-						<span style="color: lightcoral">-></span>
-						<span style="color: color-mix(in oklab, blue, white)">register</span><span style="color: lightcoral">[<span style="color: violet">0</span>]
-						</span><br>
-						<span style="color: lightblue">push</span>
-						<span style="color: color-mix(in oklab, blue, white)">register</span><span style="color: lightcoral">[<span style="color: violet">0</span>]
-						</span><br>
-						<span style="color: lightblue">push</span>
-						<span style="color: gold">"1 + 2 = "</span><br>
-						<span style="color: lightblue">call in</span>
-						<span style="color: white">print</span><br>
-						<span style="color: lightblue">call in</span>
-						<span style="color: white">print</span><br>
+						<span class="kw">bop</span>
+						<span class="num">1</span>
+						<span class="op">+</span>
+						<span class="num">2</span>
+						<span class="op">-></span>
+						<span class="kw">register</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><br>
+						<span class="kw">push</span>
+						<span class="kw">register</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><br>
+						<span class="kw">push</span>
+						<span class="str">"1 + 2 = "</span><br>
+						<span class="kw">call in</span>
+						<span>print</span><br>
+						<span class="kw">call in</span>
+						<span>print</span><br><br>
+						<span class="memo">// Output: 1 + 2 = 3</span>
 					</code>
 					<div class="hy description">
 						<p class="hy center-text" style="font-weight: bold;">
