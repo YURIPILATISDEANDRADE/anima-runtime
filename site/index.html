@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>Anima Runtime</title>
 	<link rel="icon" href="res/icon/logo-v1b-small.png">
-	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="hy">
 	<header class="hy navbar flex horizontal center-text">
@@ -27,7 +27,7 @@
 		</div>
 	</header>
 	<div>
-		<div class="hy flex horizontal center center-text big-banner" style="margin-top: 6em;">
+		<div class="hy flex horizontal center center-text banner" style="margin-top: 6em;">
 			<div style="width: max-content; height: max-content;">
 				<img src="res/icon/logo-v1b.png" width="40%" style="min-width: 12em; max-width: 18em; aspect-ratio: 1;">
 			</div>
@@ -47,17 +47,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="hy flex vertical center center-text" style="width: 90vw;">
+	<div class="hy app wide flex vertical center center-text">
 		<div class="hy flex vertical center center-text">
-			<h1 class="hy center-text no-color" style="box-shadow: none; margin-top: 2em; margin-bottom: -0.6em; width: 80vw;">
+			<h1 class="hy center-text no-color" style="box-shadow: none; margin-top: 2em; margin-bottom: -0.6em;">
 				A Fresh Way to Develop Your Programs
 			</h1>
 			<div class="hy card flex vertical center override">
-				<p>
-					<span style="color: red; font-family: monospace; font-weight: bold;">[UNDER CONSTRUCTION]</span>
-				</p>
+    			<p>
+    				<span class="hy alert danger pop loud" style="padding: 0.3em;">[UNDER CONSTRUCTION]</span>
+    			</p>
+    			<p class="hy alert danger">
+       				Page is currently under construction!
+    			</p>
 			</div>
-			<h1 class="hy center-text no-color" style="box-shadow: none; margin-bottom: -0.6em; width: 80vw;">
+			<h1 class="hy center-text no-color" style="box-shadow: none; margin-bottom: -0.6em;">
 				But Why Anima?
 			</h1>
 			<div class="hy card flex horizontal center override">
@@ -77,9 +80,9 @@
 			<h1 class="hy center-text no-color" style="box-shadow: none; margin-bottom: -0.6em; width: 80vw;">
 				Meet <a class="hy link" style="color: royalblue; font-size: inherit;" href="https://breve.animart.dev">Breve</a>: The Flagship Language of Anima
 			</h1>
-			<div class="hy card flex vertical center override">
+			<div class="hy card flex vertical center">
 				<div class="hy subcard flex horizontal center">
-					<code class="hy left-text">
+					<code class="hy left-text two-thirds">
 						<span class="kw">import</span>
 						core<span class="op">;</span>
 						<br>
@@ -91,9 +94,9 @@
 						<span class="op">{</span><br>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">writeLine</span><span class="op">(</span><span class="str">"Hello, World!"</span><span class="op">);</span><br>
 						<span class="op">}</span>
-	
+
 					</code>
-					<div class="hy description">
+					<div class="hy one-third">
 						<p class="hy center-text" style="font-weight: bold;">
 							Simplicity meets modernity.
 						</p>
@@ -103,7 +106,7 @@
 					</div>
 				</div>
 				<div class="hy subcard flex horizontal center center-text">
-					<code class="hy left-text">
+					<code class="hy left-text two-thirds">
 						<span class="kw">import</span> core<span class="op">;</span>
 						<br>
 						<br><span class="memo">// For toString</span><br>
@@ -123,14 +126,14 @@
 								<span class="op">{
 								</span><span class="op">$</span>name
 								<span class="op">:</span>
-								<span class="kw">str</span>
+								<span class="kw">string</span>
 								<span class="op">}</span>
 								<span class="op">=></span>
 								<span class="op">{
 									(
 									</span><span class="str">"Hello, "</span>
 									<span class="op">+</span>
-									<span class="op">(	
+									<span class="op">(
 									</span><span class="op">$</span>name
 									<span class="op">+</span>
 									<span class="str">"!"</span>
@@ -167,7 +170,7 @@
 							<br>
 						<span class="op">}</span>
 					</code>
-					<div class="hy description">
+					<div class="hy one-third">
 						<p class="hy center-text" style="font-weight: bold;">
 							Clean, but powerful macro system.
 						</p>
@@ -181,28 +184,28 @@
 				</div>
 			</div>
 			<h1 class="hy center-text no-color" style="box-shadow: none; margin-bottom: -0.6em; width: 80vw;">
-				Need to go to a Lower Level? <a class="hy link" style="color: royalblue; font-size: inherit;" href="https://minima.animart.dev">Minima</a> is There for You.
+				Need to go to a Lower Level? <a class="hy link" style="color: royalblue; font-size: inherit;" href="https://minima.animart.dev">Minima</a> is There for You
 			</h1>
-			<div class="hy card flex vertical center override">
+			<div class="hy card flex vertical center">
 				<div class="hy subcard flex horizontal center">
-					<code class="hy left-text">
+					<code class="hy left-text two-thirds">
+						<span class="kw">copy</span>
+						<span class="str">"1 + 2 = "</span>
+						<span class="op">-></span>
+						<span class="kw">register</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><br>
+						<span class="kw">call in</span>
+						<span>print</span><br>
 						<span class="kw">bop</span>
 						<span class="num">1</span>
 						<span class="op">+</span>
 						<span class="num">2</span>
 						<span class="op">-></span>
 						<span class="kw">register</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><br>
-						<span class="kw">push</span>
-						<span class="kw">register</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><br>
-						<span class="kw">push</span>
-						<span class="str">"1 + 2 = "</span><br>
-						<span class="kw">call in</span>
-						<span>print</span><br>
 						<span class="kw">call in</span>
 						<span>print</span><br><br>
 						<span class="memo">// Output: 1 + 2 = 3</span>
 					</code>
-					<div class="hy description">
+					<div class="hy one-third">
 						<p class="hy center-text" style="font-weight: bold;">
 							Clean and descriptive assembly.
 						</p>
