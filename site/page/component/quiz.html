@@ -23,7 +23,7 @@
             } else {
                 display.className += " " + "danger";
             }
-            display.innerText = data["answers"][answer]["message"];
+            display.innerHTML = data["answers"][answer]["message"];
         }
         function verify() {
             const display = document.getElementById("display");
@@ -37,14 +37,14 @@
                     question.appendChild(
                         (() => {
                             const blurb = document.createElement("strong");
-                            blurb.innerText = "Question: ";
+                            blurb.innerHTML = "Question: ";
                             return blurb;
                         })(),
                     );
                     question.appendChild(
                         (() => {
                             const content = document.createElement("span");
-                            content.innerText = decodeURIComponent(
+                            content.innerHTML = decodeURIComponent(
                                 data["question"],
                             );
                             return content;
