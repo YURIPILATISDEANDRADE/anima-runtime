@@ -27,7 +27,7 @@
                 <strong>variables</strong>: These are stored in the
                 <strong>global space</strong>. While their declarations are
                 scoped, their value can be accessed from any scope, by using the
-                same <strong>address name</strong>. Declared as
+                same <strong>address name</strong>.<br />Declared as
                 <code class="hy inline">
                     <span class="kw">global</span><span class="op">[</span
                     ><span class="str">"&lt;address name&gt;"</span
@@ -39,7 +39,7 @@
                 <strong>variables</strong>: These are stored in the
                 <strong>register space</strong>. There are 32 general-purpose
                 registers in the ARTE, and these are used by internal functions.
-                Declared as
+                <br />Declared as
                 <code class="hy inline">
                     <span class="kw">global</span><span class="op">[</span
                     ><span class="num">&lt;register index&gt;</span
@@ -61,6 +61,12 @@
                 ARTE implementation to another, as it is intended to be one way
                 for cross-language communication.
                 <strong>This variable location can only be read from.</strong>
+                <br />Declared as
+                <code class="hy inline">
+                    <span class="kw">out</span><span class="op">[</span
+                    ><span class="str">"&lt;source name&gt;"</span
+                    ><span class="op">]</span></code
+                >.
             </p>
             <p>
                 If a location is not defined in a variable declaration, the
@@ -88,14 +94,6 @@
             <h2 class="hy">Declarations</h2>
             <p>Variables are declared as such:</p>
             <code class="hy block">
-                &lt;name&gt;
-                <span class="op">:</span> &lt;type&gt;
-                <span class="op">=</span> &lt;value&gt;
-                <br />
-                <br />
-                <span class="memo">// or</span>
-                <br />
-                <br />
                 &lt;location&gt; &lt;name&gt;
                 <span class="op">:</span> &lt;type&gt;
                 <span class="op">=</span> &lt;value&gt;</code
@@ -103,20 +101,28 @@
             <p>Where:</p>
             <p>
                 <code class="hy inline">&lt;location&gt;</code> is one of the
-                previously-mentioned locations.
+                previously-mentioned locations. <bold>Optional.</bold>
             </p>
             <p>
                 <code class="hy inline">&lt;name&gt;</code> is the variable's
                 name. Follows the same rules as variable names in other
-                languages.
+                languages. <bold>Required.</bold>
             </p>
             <p>
                 <code class="hy inline">&lt;type&gt;</code> is the variable's
-                type.
+                type. These can be basic types, or classes.
+                <bold
+                    >Optional if <code class="hy">&lt;value&gt;</code> is
+                    set.</bold
+                >
             </p>
             <p>
                 <code class="hy inline">&lt;value&gt;</code> is the variable's
                 value.
+                <bold
+                    >Optional if <code class="hy">&lt;type&gt;</code> is
+                    set.</bold
+                >
             </p>
         </div>
     </body>
