@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Breve</title>
+        <link rel="icon" href="res/icon/logo-v1b-small.png" />
+        <link rel="stylesheet" href="../../../../css/style.css" />
+    </head>
+    <body class="hy" style="background-color: white">
+        <div class="hy sidebar">
+            <iframe class="hy display" src="../nav.html">The fuck?</iframe>
+        </div>
+        <div class="hy app wide flex vertical center left-text">
+            <h2 class="hy">Variables</h2>
+            <p class="hy">
+                Variables are a way to store data in Breve. These come in many
+                different flavours:
+            </p>
+            <p class="hy">
+                <code class="hy inline"><span class="kw">local</span></code>
+                <strong>variables</strong>: These are stored in the
+                <strong>stack</strong>, and can only be utilized in the scope
+                they are declared in.
+            </p>
+            <p class="hy">
+                <code class="hy inline"><span class="kw">global</span></code>
+                <strong>variables</strong>: These are stored in the
+                <strong>global space</strong>. While their declarations are
+                scoped, their value can be accessed from any scope, by using the
+                same <strong>address name</strong>.<br />Declared as
+                <code class="hy inline">
+                    <span class="kw">global</span><span class="op">[</span
+                    ><span class="str">"&lt;address name&gt;"</span
+                    ><span class="op">]</span></code
+                >.
+            </p>
+            <p class="hy">
+                <code class="hy inline"><span class="kw">register</span></code>
+                <strong>variables</strong>: These are stored in the
+                <strong>register space</strong>. There are 32 general-purpose
+                registers in the ARTE, and these are used by internal functions.
+                <br />Declared as
+                <code class="hy inline">
+                    <span class="kw">global</span><span class="op">[</span
+                    ><span class="num">&lt;register index&gt;</span
+                    ><span class="op">]</span></code
+                >.
+            </p>
+            <p class="hy">
+                <code class="hy inline"><span class="kw">temporary</span></code>
+                <strong>variables</strong>: These are stored in the
+                <strong>temporary space</strong>. This space is also used for
+                storing results (be it functions, expressions, operators, etc.),
+                so it is not guaranteed its value will be consistent to what you
+                set.
+            </p>
+            <p class="hy">
+                <code class="hy inline"><span class="kw">out</span></code>
+                <strong>variables</strong>: These variables are stored in an
+                implementation-defined place. This behaviour varies from one
+                ARTE implementation to another, as it is intended to be one way
+                for cross-language communication.
+                <strong>This variable location can only be read from.</strong>
+                <br />Declared as
+                <code class="hy inline">
+                    <span class="kw">out</span><span class="op">[</span
+                    ><span class="str">"&lt;source name&gt;"</span
+                    ><span class="op">]</span></code
+                >.
+            </p>
+            <p class="hy">
+                If a location is not defined in a variable declaration, the
+                default is
+                <code class="hy inline"><span class="kw">local</span></code
+                >.
+            </p>
+            <div class="hy card" style="min-height: 30em">
+                <h3 class="hy">Quiz Time!</h3>
+                <iframe
+                    class="hy"
+                    style="height: 25em"
+                    src="../../../component/quiz.html?::{
+                    `question`: `Why should you avoid using <code class='hy'><span class='kw'>temporary</span></code> variables?`,
+                    `answers`: [
+                        {`value`:`It would give a compiler error.`, `message`:`Wrong! <code class='hy'><span class='kw'>temporary</span></code> variables are valid variables.`},
+                        {`value`:`The value is inconsistent.`, `message`:`Correct! The value is not guaranteed to remain the same.`},
+                        {`value`:`It causes undefined behaviour when used.`, `message`:`Wrong! Its behaviour is defined, just not guaranteed.`},
+                        {`value`:`It is a read-only source location.`, `message`:`Wrong! Those are <code class='hy'><span class='kw'>out</span></code> variables.`}
+                    ],
+                    `correct`: 1
+                }"
+                ></iframe>
+            </div>
+            <h2 class="hy">Declarations</h2>
+            <p class="hy">Variables are declared as such:</p>
+            <code class="hy block">
+                &lt;location&gt; &lt;name&gt;
+                <span class="op">:</span> &lt;type&gt;
+                <span class="op">=</span> &lt;value&gt;</code
+            >
+            <p class="hy">Where:</p>
+            <p class="hy">
+                <code class="hy inline">&lt;location&gt;</code> is one of the
+                previously-mentioned locations. <strong>Optional.</strong>
+            </p>
+            <p class="hy">
+                <code class="hy inline">&lt;name&gt;</code> is the variable's
+                name. Follows the same rules as variable names in other
+                languages. <strong>Required.</strong>
+            </p>
+            <p class="hy">
+                <code class="hy inline">&lt;type&gt;</code> is the variable's
+                type. These can be basic types, or classes.
+                <strong
+                    >Optional if <code class="hy inline">&lt;value&gt;</code> is
+                    set.</strong
+                >
+            </p>
+            <p class="hy">
+                <code class="hy inline">&lt;value&gt;</code> is the variable's
+                value.
+                <strong
+                    >Optional if <code class="hy inline">&lt;type&gt;</code> is
+                    set.</strong
+                >
+            </p>
+            <p class="hy">Thusly, variables can be declared as:</p>
+            <code class="hy block"> </code>
+        </div>
+    </body>
+</html>
