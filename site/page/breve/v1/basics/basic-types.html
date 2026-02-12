@@ -311,6 +311,23 @@
                     destination type is the expected type!
                 </p>
             </div>
+            <div class="hy card" style="min-height: 30em">
+                <h3 class="hy">Quiz Time!</h3>
+                <iframe
+                    class="hy"
+                    style="height: 25em"
+                    src="../../../component/quiz.html?::{
+                    `question`: `Which type can be converted to an from any type?`,
+                    `answers`: [
+                        {`value`:`<code class='hy inline'><span class='kw'>any</span></code>.`, `message`:`Correct! <code class='hy inline'><span class='kw'>any</span></code> can be casted-to and casted-from <em>any</em> type.`},
+                        {`value`:`<code class='hy inline'><span class='kw'>object</span></code>.`, `message`:`Wrong!`},
+                        {`value`:`<code class='hy inline'><span class='kw'>null</span></code>.`, `message`:`Wrong!`},
+                        {`value`:`<code class='hy inline'><span class='kw'>string</span></code>.`, `message`:`Wrong!`}
+                    ],
+                    `correct`: 0
+                }"
+                ></iframe>
+            </div>
         </div>
     </body>
 </html>
