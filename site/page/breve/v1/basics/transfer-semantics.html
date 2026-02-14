@@ -17,9 +17,9 @@
                 around.
             </p>
             <p class="hy">
-                In Breve, how a value gets passed around is defined by the
-                caller, not the callee. There are three ways to pass values
-                around:
+                In Breve, how a value gets passed around is defined at the
+                assignment level, not the declaration level. There are three
+                ways to pass values around:
             </p>
             <p class="hy">
                 By <code class="hy inline"><span class="kw">copy</span></code
@@ -41,7 +41,30 @@
                 deault. Constants are copied.
             </p>
             <p class="hy">For example:</p>
-            <code class="hy block"></code>
+            <code class="hy block">
+                var1 <span class="op">=</span>
+                <span class="str">"This is a string!"</span
+                ><span class="op">;</span><br /><br />
+                <span class="memo">// var1 is now empty (would read void)</span>
+                <br />
+                var2 <span class="op">=</span> var1<span class="op">;</span
+                ><br /><br />
+                <span class="memo"
+                    >// var3 holds a copy of var2, so var2 can be modified
+                    without issues</span
+                >
+                <br />
+                var3 <span class="op">=</span>
+                <span class="kw">copy</span> var2<span class="op">;</span>
+                <br /><br />
+                <span class="memo"
+                    >// var1 holds a reference to var2, so any changes in var1
+                    will be reflected there</span
+                >
+                <br />
+                var1 <span class="op">=</span>
+                <span class="kw">ref</span> var2<span class="op">;</span>
+            </code>
         </div>
     </body>
 </html>
