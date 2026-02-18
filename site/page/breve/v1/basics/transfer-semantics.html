@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Breve</title>
+        <link rel="icon" href="res/icon/logo-v1b-small.png" />
+        <link rel="stylesheet" href="../../../../css/style.css" />
+    </head>
+    <body class="hy" style="background-color: white">
+        <div class="hy sidebar">
+            <iframe class="hy display" src="../nav.html">The fuck?</iframe>
+        </div>
+        <div class="hy app wide flex vertical center left-text">
+            <h2 class="hy">Transfer Semantics</h2>
+            <p class="hy">
+                <em>Transfer Semantics</em> is the nature of how a given value is passed
+                around.
+            </p>
+            <p class="hy">
+                In Breve, how a value gets passed around is defined at
+                <em>assignment</em>, not declaration. There are three ways to
+                pass values around:
+            </p>
+            <p class="hy">
+                By <code class="hy inline"><span class="kw">copy</span></code
+                >: This creates a copy of a a given value,
+                <strong>keeping the source intact</strong>.
+            </p>
+            <p class="hy">
+                By <code class="hy inline"><span class="kw">ref</span></code
+                >: This simply passes a reference of the given value.
+            </p>
+            <p class="hy">
+                By <code class="hy inline"><span class="kw">move</span></code
+                >: This moves the value from the source to the destination.
+                <strong>The source gets cleared of its value</strong>.
+            </p>
+            <p class="hy">
+                All values (except the ones listed in the note below) in Breve
+                are passed by
+                <code class="hy inline"><span class="kw">move</span></code> by
+                deault.
+            </p>
+            <div class="hy alert info soft subcard">
+                <h3 class="hy alert info loud">Note</h3>
+                <p class="hy">All constants are copied.</p>
+                <p class="hy">
+                    For most binary expressions (except <em>chain assignment</em> and <em>right-hand decay</em>), the result will always result in
+                    a <em>new moved value</em>, so
+                    <code class="hy inline"><span class="kw">copy</span></code>
+                    and
+                    <code class="hy inline"><span class="kw">ref</span></code>
+                    is effectively unecessary (and counterproductive).
+                </p>
+                <p class="hy">
+                    All unary expressions result in a NMV, except:
+                    <ul>
+                        <li>
+                            Pre-Increment (<code class="hy inline"
+                                ><span class="op">++</span
+                                >&lt;expr&gt;</code
+                            >)
+                        </li>
+                        <li>
+                            Pre-Decrement (<code class="hy inline"
+                                ><span class="op">--</span
+                                >&lt;expr&gt;</code
+                            >)
+                        </li>
+                    </ul>
+                    <span class="hy no-color">where the result is a reference to
+                    <code class="hy inline">&lt;expr&gt;</code>.</span>
+                </p>
+                <p class="hy">
+                    For member calls,
+                    <code class="hy inline"><span class="num">self</span></code>
+                    is always a reference.
+                </p>
+            </div>
+            <p class="hy">For example:</p>
+            <code class="hy block">
+                var1 <span class="op">=</span>
+                <span class="str">"This is a string!"</span
+                ><span class="op">;</span><br /><br />
+                <span class="memo">// var1 is now empty (would read void)</span>
+                <br />
+                var2 <span class="op">=</span> var1<span class="op">;</span
+                ><br /><br />
+                <span class="memo"
+                    >// var3 holds a copy of var2, so var2 can be modified
+                    without issues</span
+                >
+                <br />
+                var3 <span class="op">=</span>
+                <span class="kw">copy</span> var2<span class="op">;</span>
+                <br /><br />
+                <span class="memo"
+                    >// var1 holds a reference to var2, so any changes in var1
+                    will be reflected there</span
+                >
+                <br />
+                var1 <span class="op">=</span>
+                <span class="kw">ref</span> var2<span class="op">;</span>
+            </code>
+            <div class="hy card" style="min-height: 30em">
+                <h3 class="hy">Quiz Time!</h3>
+                <iframe
+                    class="hy"
+                    style="height: 25em"
+                    src="../../../component/quiz.html?::{
+                    `question`: `If after the last line one were to add <code class='hy inline'>var3 <span class='op'>+=</span> <span class='str'>' This is a new line!'</span></code>,<br/>the value in <code class='hy inline'>var1</code> would be unaffected.`,
+                    `answers`: [
+                        {`value`:`True.`, `message`:`Correct! <code class='hy inline'>var3</code> holds a completely new value, not a reference to another one.`},
+                        {`value`:`False.`, `message`:`Wrong!`}
+                    ],
+                    `correct`: 0
+                }"
+                ></iframe>
+            </div>
+        </div>
+    </body>
+</html>
