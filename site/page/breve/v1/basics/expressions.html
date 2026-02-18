@@ -12,7 +12,193 @@
         </div>
         <div class="hy app wide flex vertical center left-text">
             <h2 class="hy">Expressions</h2>
-            <p class="hy">Expressions are the building blocks of your code.</p>
+            <p class="hy">
+                Expressions are the building blocks of your code. These can be
+                the following:
+            </p>
+            <p class="hy">
+                <strong>Unary Expressions</strong>: Comprised of inversion
+                (<code class="hy inline"
+                    ><span class="op">-</span>&lt;expr&gt;</code
+                >), positration (<code class="hy inline"
+                    ><span class="op">+</span>&lt;expr&gt;</code
+                >), pre-increment (<code class="hy inline"
+                    ><span class="op">++</span>&lt;expr&gt;</code
+                >), pre-decrement (<code class="hy inline"
+                    ><span class="op">--</span>&lt;expr&gt;</code
+                >), post-increment (<code class="hy inline"
+                    >&lt;expr&gt;<span class="op">++</span></code
+                >), post-decrement (<code class="hy inline"
+                    >&lt;expr&gt;<span class="op">--</span></code
+                >), logical negation (<code class="hy inline"
+                    ><span class="op">!</span>&lt;expr&gt;</code
+                >), bitwise negation (<code class="hy inline"
+                    ><span class="op">~</span>&lt;expr&gt;</code
+                >), sizing (<code class="hy inline"
+                    ><span class="kw">sizeof</span> &lt;expr&gt;</code
+                >).
+            </p>
+            <p class="hy">
+                <strong>Binary Expressions</strong>: Wrapped within parens, and
+                comprised of arithmetic operations (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="op">+</span> &lt;expr&gt;</code
+                >), logic operations (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="op">&&</span> &lt;expr&gt;</code
+                >), bitwise operations (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="op">^</span> &lt;expr&gt;</code
+                >), casting (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="kw">as</span> &lt;type&gt;</code
+                >), null coalescence (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="kw">or</span> &lt;expr&gt;</code
+                >), structured subscription (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="op">:</span> &lt;expr&gt;</code
+                >), assignment chaining (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="op">=</span> &lt;expr&gt;</code
+                >), comparisons (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt;
+                    <span class="op">&gt;</span> &lt;expr&gt;</code
+                >).
+            </p>
+            <p class="hy">
+                <strong>Ternary Expressions</strong>: Also wrapped within
+                parens, and comprised of inline valuing (e.g.
+                <code class="hy inline"
+                    >&lt;expr&gt; <span class="kw">if</span> &lt;expr&gt;
+                    <span class="kw">else</span> &lt;expr&gt;</code
+                >).
+            </p>
+            <p class="hy">
+                <strong>Variadic Expressions</strong>: Also wrapped within
+                parens, and comprised of the comma operator (e.g.
+                <code class="hy inline"
+                    ><span class="op">(</span>&lt;expr&gt;
+                    <span class="op">,</span> &lt;expr&gt;
+                    <span class="memo">[</span><span class="op">,</span>
+                    <span class="memo">...]</span
+                    ><span class="op">)</span></code
+                >).
+            </p>
+            <p class="hy">
+                <strong>Function calls</strong>: Like ones seen previously.
+                Arguments are passed within parens.
+            </p>
+            <p class="hy">
+                <strong>Block declarations</strong>: Wrapped within curly
+                brackets, and contains <strong>one or more</strong> expressions.
+            </p>
+            <p class="hy">As for each class of operation:</p>
+            <h3 class="hy">Arithmetic</h3>
+            <table class="hy alternate">
+                <tr class="hy">
+                    <th class="hy">Name</th>
+                    <th class="hy">Type</th>
+                    <th class="hy">Expression</th>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Addition</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="op">+</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Subtraction</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="op">-</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Multiplication</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="op">*</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Division</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="op">/</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Modulo (Remainder)</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="op">%</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Exponentiation</td>
+                    <td class="hy">Binary</td>
+                    <td class="hy">
+                        <code class="hy inline"
+                            ><span class="op">(</span>&lt;lhs&gt;
+                            <span class="kw">pow</span> &lt;rhs&gt;<span
+                                class="op"
+                                >)</span
+                            ></code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Inversion</td>
+                    <td class="hy">Unary</td>
+                    <td class="hy">
+                        <code class="hy inline">
+                            <span class="op">-</span>&lt;rhs&gt;</code
+                        >
+                    </td>
+                </tr>
+                <tr class="hy">
+                    <td class="hy">Positration</td>
+                    <td class="hy">Unary</td>
+                    <td class="hy">
+                        <code class="hy inline">
+                            <span class="op">+</span>&lt;rhs&gt;</code
+                        >
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
